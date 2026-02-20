@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Proyectos — EXCAVA.DO | Excavación en República Dominicana</title>
+  <meta name="description" content="Galería de proyectos completados de excavación, movimiento de tierra y preparación de terrenos en República Dominicana.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://excava.do/projects.html">
+
+  <link rel="alternate" hreflang="es" href="https://excava.do/projects.html">
+  <link rel="alternate" hreflang="en" href="https://excava.do/projects.html?lang=en">
+  <link rel="alternate" hreflang="fr" href="https://excava.do/projects.html?lang=fr">
+  <link rel="alternate" hreflang="it" href="https://excava.do/projects.html?lang=it">
+  <link rel="alternate" hreflang="x-default" href="https://excava.do/projects.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://excava.do/projects.html">
+  <meta property="og:title" content="Proyectos — EXCAVA.DO">
+  <meta property="og:description" content="Galería de proyectos de excavación y movimiento de tierra en República Dominicana.">
+  <meta property="og:site_name" content="EXCAVA.DO">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23D4A833' font-family='Arial Black' font-size='10' font-weight='900'%3EEX%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --gold: #D4A833;
+      --gold-light: #E8C44A;
+      --gold-dark: #B8922A;
+      --bg-dark: #141414;
+      --bg-card: #1E1E1E;
+      --bg-surface: #252525;
+      --text-primary: #F0EDE6;
+      --text-secondary: #B0ACA3;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1DA851;
+      --font-display: 'Oswald', 'Arial Black', sans-serif;
+      --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: linear-gradient(180deg, rgba(20,20,20,0.97) 0%, rgba(20,20,20,0.92) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--gold);
+      padding: 0 16px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 2px;
+    }
+    .logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-sep { color: var(--text-secondary); opacity: 0.3; }
+    .lang-toggle {
+      background: none;
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 4px 8px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .lang-dropdown { position: relative; }
+    .lang-menu {
+      display: none;
+      position: absolute;
+      top: 100%; right: 0;
+      margin-top: 8px;
+      background: var(--bg-card);
+      border: 1px solid rgba(212,168,51,0.3);
+      border-radius: 8px;
+      overflow: hidden;
+      min-width: 100px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px 16px;
+      background: none;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+    .lang-menu button:hover { background: rgba(212,168,51,0.1); color: var(--gold); }
+    .lang-menu button.active { color: var(--gold); }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%);
+      border-bottom: 1px solid rgba(212,168,51,0.15);
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 6vw, 2.8rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .page-hero h1 .gold { color: var(--gold); }
+    .page-hero p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ===== FILTER TABS ===== */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      padding: 20px 20px 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      border: 1px solid rgba(212,168,51,0.15);
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .filter-btn.active {
+      background: var(--gold);
+      color: var(--bg-dark);
+      border-color: var(--gold);
+    }
+
+    /* ===== PROJECT GRID ===== */
+    .projects-section { padding: 20px 20px 60px; }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(212,168,51,0.1);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .project-card:hover {
+      border-color: rgba(212,168,51,0.3);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+    .project-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .project-img-placeholder.exc { background: linear-gradient(135deg, #3a3520, #2a2818); }
+    .project-img-placeholder.earth { background: linear-gradient(135deg, #2a3020, #1e2518); }
+    .project-img-placeholder.land { background: linear-gradient(135deg, #302a20, #25201a); }
+
+    .project-body { padding: 16px; }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      background: rgba(212,168,51,0.12);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .project-location {
+      font-size: 0.82rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--bg-dark);
+      border-top: 2px solid var(--gold);
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .footer-brand span { color: var(--gold); }
+    .footer-langs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .footer-langs button {
+      background: none;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .footer-langs button:hover, .footer-langs button.active {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+    .footer-tagline {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .wa-float {
+      position: fixed;
+      bottom: 24px; right: 20px;
+      z-index: 90;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      transition: transform 0.2s;
+      animation: wa-pulse 3s ease-in-out infinite;
+    }
+    .wa-float:active { transform: scale(0.92); }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 4px 16px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 28px rgba(37,211,102,0.6); }
+    }
+
+    /* ===== NO RESULTS ===== */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      display: none;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 520px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 800px) {
+      .projects-grid { grid-template-columns: repeat(3, 1fr); }
+      .site-header { padding: 0 40px; height: 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">EXCAVA<span>.DO</span></a>
+    <nav class="nav-links">
+      <a href="/" data-i18n="nav_home">Inicio</a>
+      <span class="nav-sep">|</span>
+      <a href="projects.html" class="active" data-i18n="nav_projects">Proyectos</a>
+      <span class="nav-sep">|</span>
+      <div class="lang-dropdown">
+        <button class="lang-toggle" id="langBtn" aria-label="Change language" aria-expanded="false">ES</button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button role="menuitem" data-lang="es" class="active">Español</button>
+          <button role="menuitem" data-lang="en">English</button>
+          <button role="menuitem" data-lang="fr">Français</button>
+          <button role="menuitem" data-lang="it">Italiano</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <h1><span class="gold" data-i18n="page_title">Nuestros Proyectos</span></h1>
+      <p data-i18n="page_subtitle">Proyectos completados y en curso en toda la República Dominicana.</p>
+    </section>
+
+    <!-- FILTER -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+      <button class="filter-btn" data-filter="excavation" data-i18n="filter_exc">Excavación</button>
+      <button class="filter-btn" data-filter="earthmoving" data-i18n="filter_earth">Mov. de Tierra</button>
+      <button class="filter-btn" data-filter="landprep" data-i18n="filter_land">Prep. de Terreno</button>
+    </div>
+
+    <!-- PROJECTS GRID -->
+    <section class="projects-section">
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card fade-in" data-type="excavation">
+          <div class="project-img"><div class="project-img-placeholder exc">🏗️</div></div>
+          <div class="project-body">
+            <span class="project-tag" data-i18n="tag_exc">Excavación</span>
+            <h2 class="project-title" data-i18n="p1_title">Residencial Cana Bay</h2>
+            <p class="project-location">📍 <span data-i18n="p1_loc">Punta Cana, La Altagracia</span></p>
+            <p class="project-desc" data-i18n="p1_desc">Excavación de cimientos y movimiento de tierra para complejo residencial de lujo con 120 unidades.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-type="earthmoving">
+          <div class="project-img"><div class="project-img-placeholder earth">🚜</div></div>
+          <div class="project-body">
+            <span class="project-tag" data-i18n="tag_earth">Mov. de Tierra</span>
+            <h2 class="project-title" data-i18n="p2_title">Acceso Vial Bávaro</h2>
+            <p class="project-location">📍 <span data-i18n="p2_loc">Bávaro, La Altagracia</span></p>
+            <p class="project-desc" data-i18n="p2_desc">Nivelación y preparación de suelo para nueva vía de acceso en zona turística de Bávaro.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-type="landprep">
+          <div class="project-img"><div class="project-img-placeholder land">🌴</div></div>
+          <div class="project-body">
+            <span class="project-tag" data-i18n="tag_land">Prep. de Terreno</span>
+            <h2 class="project-title" data-i18n="p3_title">Resort Costa del Coco</h2>
+            <p class="project-location">📍 <span data-i18n="p3_loc">Miches, El Seibo</span></p>
+            <p class="project-desc" data-i18n="p3_desc">Desmonte y preparación de 15 hectáreas para nuevo resort todo-incluido frente al mar.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-type="excavation">
+          <div class="project-img"><div class="project-img-placeholder exc">🏗️</div></div>
+          <div class="project-body">
+            <span class="project-tag" data-i18n="tag_exc">Excavación</span>
+            <h2 class="project-title" data-i18n="p4_title">Plaza Comercial Downtown</h2>
+            <p class="project-location">📍 <span data-i18n="p4_loc">Santo Domingo Este</span></p>
+            <p class="project-desc" data-i18n="p4_desc">Excavación profunda para estacionamiento subterráneo de centro comercial de 3 niveles.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-type="earthmoving">
+          <div class="project-img"><div class="project-img-placeholder earth">🚜</div></div>
+          <div class="project-body">
+            <span class="project-tag" data-i18n="tag_earth">Mov. de Tierra</span>
+            <h2 class="project-title" data-i18n="p5_title">Parque Industrial Este</h2>
+            <p class="project-location">📍 <span data-i18n="p5_loc">San Pedro de Macorís</span></p>
+            <p class="project-desc" data-i18n="p5_desc">Relleno y nivelación de terreno para zona industrial de 8 hectáreas.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-type="landprep">
+          <div class="project-img"><div class="project-img-placeholder land">🌴</div></div>
+          <div class="project-body">
+            <span class="project-tag" data-i18n="tag_land">Prep. de Terreno</span>
+            <h2 class="project-title" data-i18n="p6_title">Comunidad Cap Cana</h2>
+            <p class="project-location">📍 <span data-i18n="p6_loc">Cap Cana, La Altagracia</span></p>
+            <p class="project-desc" data-i18n="p6_desc">Limpieza y preparación de parcelas residenciales para nuevo desarrollo de viviendas.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="no-results" id="noResults">
+        <p data-i18n="no_results">No hay proyectos en esta categoría aún.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">EXCAVA<span>.DO</span></div>
+    <div class="footer-langs">
+      <button data-lang="es" class="active">ES</button>
+      <span class="nav-sep">|</span>
+      <button data-lang="en">EN</button>
+      <span class="nav-sep">|</span>
+      <button data-lang="fr">FR</button>
+      <span class="nav-sep">|</span>
+      <button data-lang="it">IT</button>
+    </div>
+    <p class="footer-tagline" data-i18n="footer_tagline">Sirviendo toda República Dominicana</p>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/18090000000?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." class="wa-float" id="waFloat" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+  (function() {
+    'use strict';
+
+    const T = {
+      es: {
+        nav_home: 'Inicio', nav_projects: 'Proyectos',
+        page_title: 'Nuestros Proyectos',
+        page_subtitle: 'Proyectos completados y en curso en toda la República Dominicana.',
+        filter_all: 'Todos', filter_exc: 'Excavación', filter_earth: 'Mov. de Tierra', filter_land: 'Prep. de Terreno',
+        tag_exc: 'Excavación', tag_earth: 'Mov. de Tierra', tag_land: 'Prep. de Terreno',
+        p1_title: 'Residencial Cana Bay', p1_loc: 'Punta Cana, La Altagracia',
+        p1_desc: 'Excavación de cimientos y movimiento de tierra para complejo residencial de lujo con 120 unidades.',
+        p2_title: 'Acceso Vial Bávaro', p2_loc: 'Bávaro, La Altagracia',
+        p2_desc: 'Nivelación y preparación de suelo para nueva vía de acceso en zona turística de Bávaro.',
+        p3_title: 'Resort Costa del Coco', p3_loc: 'Miches, El Seibo',
+        p3_desc: 'Desmonte y preparación de 15 hectáreas para nuevo resort todo-incluido frente al mar.',
+        p4_title: 'Plaza Comercial Downtown', p4_loc: 'Santo Domingo Este',
+        p4_desc: 'Excavación profunda para estacionamiento subterráneo de centro comercial de 3 niveles.',
+        p5_title: 'Parque Industrial Este', p5_loc: 'San Pedro de Macorís',
+        p5_desc: 'Relleno y nivelación de terreno para zona industrial de 8 hectáreas.',
+        p6_title: 'Comunidad Cap Cana', p6_loc: 'Cap Cana, La Altagracia',
+        p6_desc: 'Limpieza y preparación de parcelas residenciales para nuevo desarrollo de viviendas.',
+        no_results: 'No hay proyectos en esta categoría aún.',
+        footer_tagline: 'Sirviendo toda República Dominicana',
+        wa_msg: 'Hola, me gustaría solicitar una cotización para servicios de excavación.',
+        meta_title: 'Proyectos — EXCAVA.DO | Excavación en República Dominicana',
+        meta_desc: 'Galería de proyectos de excavación, movimiento de tierra y preparación de terrenos en República Dominicana.'
+      },
+      en: {
+        nav_home: 'Home', nav_projects: 'Projects',
+        page_title: 'Our Projects',
+        page_subtitle: 'Completed and ongoing projects across the Dominican Republic.',
+        filter_all: 'All', filter_exc: 'Excavation', filter_earth: 'Earth Moving', filter_land: 'Land Prep',
+        tag_exc: 'Excavation', tag_earth: 'Earth Moving', tag_land: 'Land Prep',
+        p1_title: 'Cana Bay Residential', p1_loc: 'Punta Cana, La Altagracia',
+        p1_desc: 'Foundation excavation and earth moving for a luxury residential complex with 120 units.',
+        p2_title: 'Bávaro Access Road', p2_loc: 'Bávaro, La Altagracia',
+        p2_desc: 'Leveling and soil preparation for a new access road in the Bávaro tourism zone.',
+        p3_title: 'Costa del Coco Resort', p3_loc: 'Miches, El Seibo',
+        p3_desc: 'Clearing and preparation of 15 hectares for a new beachfront all-inclusive resort.',
+        p4_title: 'Downtown Commercial Plaza', p4_loc: 'Santo Domingo Este',
+        p4_desc: 'Deep excavation for a 3-level underground parking garage in a commercial center.',
+        p5_title: 'Eastern Industrial Park', p5_loc: 'San Pedro de Macorís',
+        p5_desc: 'Fill and leveling of 8 hectares of land for an industrial zone.',
+        p6_title: 'Cap Cana Community', p6_loc: 'Cap Cana, La Altagracia',
+        p6_desc: 'Clearing and preparation of residential lots for a new housing development.',
+        no_results: 'No projects in this category yet.',
+        footer_tagline: 'Serving all of Dominican Republic',
+        wa_msg: 'Hello, I would like to request a quote for excavation services.',
+        meta_title: 'Projects — EXCAVA.DO | Excavation in Dominican Republic',
+        meta_desc: 'Gallery of excavation, earth moving, and land preparation projects in the Dominican Republic.'
+      },
+      fr: {
+        nav_home: 'Accueil', nav_projects: 'Projets',
+        page_title: 'Nos Projets',
+        page_subtitle: 'Projets complétés et en cours dans toute la République Dominicaine.',
+        filter_all: 'Tous', filter_exc: 'Excavation', filter_earth: 'Terrassement', filter_land: 'Prép. Terrain',
+        tag_exc: 'Excavation', tag_earth: 'Terrassement', tag_land: 'Prép. Terrain',
+        p1_title: 'Résidentiel Cana Bay', p1_loc: 'Punta Cana, La Altagracia',
+        p1_desc: 'Excavation de fondations et terrassement pour un complexe résidentiel de luxe de 120 unités.',
+        p2_title: 'Voie d\'accès Bávaro', p2_loc: 'Bávaro, La Altagracia',
+        p2_desc: 'Nivellement et préparation du sol pour une nouvelle voie d\'accès en zone touristique.',
+        p3_title: 'Resort Costa del Coco', p3_loc: 'Miches, El Seibo',
+        p3_desc: 'Défrichage et préparation de 15 hectares pour un nouveau resort tout-inclus en bord de mer.',
+        p4_title: 'Plaza Comercial Downtown', p4_loc: 'Santo Domingo Este',
+        p4_desc: 'Excavation profonde pour un parking souterrain de 3 niveaux dans un centre commercial.',
+        p5_title: 'Parc Industriel Est', p5_loc: 'San Pedro de Macorís',
+        p5_desc: 'Remblai et nivellement de 8 hectares pour une zone industrielle.',
+        p6_title: 'Communauté Cap Cana', p6_loc: 'Cap Cana, La Altagracia',
+        p6_desc: 'Nettoyage et préparation de parcelles résidentielles pour un nouveau développement.',
+        no_results: 'Pas encore de projets dans cette catégorie.',
+        footer_tagline: 'Au service de toute la République Dominicaine',
+        wa_msg: 'Bonjour, je souhaiterais demander un devis pour des services d\'excavation.',
+        meta_title: 'Projets — EXCAVA.DO | Excavation en République Dominicaine',
+        meta_desc: 'Galerie de projets d\'excavation et terrassement en République Dominicaine.'
+      },
+      it: {
+        nav_home: 'Home', nav_projects: 'Progetti',
+        page_title: 'I Nostri Progetti',
+        page_subtitle: 'Progetti completati e in corso in tutta la Repubblica Dominicana.',
+        filter_all: 'Tutti', filter_exc: 'Scavo', filter_earth: 'Mov. Terra', filter_land: 'Prep. Terreno',
+        tag_exc: 'Scavo', tag_earth: 'Mov. Terra', tag_land: 'Prep. Terreno',
+        p1_title: 'Residenziale Cana Bay', p1_loc: 'Punta Cana, La Altagracia',
+        p1_desc: 'Scavo di fondamenta e movimento terra per un complesso residenziale di lusso con 120 unità.',
+        p2_title: 'Strada d\'accesso Bávaro', p2_loc: 'Bávaro, La Altagracia',
+        p2_desc: 'Livellamento e preparazione del suolo per una nuova via di accesso nella zona turistica.',
+        p3_title: 'Resort Costa del Coco', p3_loc: 'Miches, El Seibo',
+        p3_desc: 'Disboscamento e preparazione di 15 ettari per un nuovo resort tutto-incluso fronte mare.',
+        p4_title: 'Plaza Comercial Downtown', p4_loc: 'Santo Domingo Este',
+        p4_desc: 'Scavo profondo per parcheggio sotterraneo a 3 livelli in un centro commerciale.',
+        p5_title: 'Parco Industriale Est', p5_loc: 'San Pedro de Macorís',
+        p5_desc: 'Riempimento e livellamento di 8 ettari di terreno per una zona industriale.',
+        p6_title: 'Comunità Cap Cana', p6_loc: 'Cap Cana, La Altagracia',
+        p6_desc: 'Pulizia e preparazione di lotti residenziali per un nuovo sviluppo abitativo.',
+        no_results: 'Nessun progetto in questa categoria ancora.',
+        footer_tagline: 'Al servizio di tutta la Repubblica Dominicana',
+        wa_msg: 'Ciao, vorrei richiedere un preventivo per servizi di scavo.',
+        meta_title: 'Progetti — EXCAVA.DO | Scavo nella Repubblica Dominicana',
+        meta_desc: 'Galleria di progetti di scavo e movimento terra nella Repubblica Dominicana.'
+      }
+    };
+
+    const WA_NUMBER = '18090000000';
+    let currentLang = 'es';
+
+    function detectLang() {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang');
+      if (urlLang && T[urlLang]) return urlLang;
+      const saved = localStorage.getItem('excava_lang');
+      if (saved && T[saved]) return saved;
+      return 'es';
+    }
+
+    function setLang(lang) {
+      if (!T[lang]) return;
+      currentLang = lang;
+      localStorage.setItem('excava_lang', lang);
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (T[lang][key] !== undefined) el.textContent = T[lang][key];
+      });
+
+      const waMsg = encodeURIComponent(T[lang].wa_msg);
+      document.getElementById('waFloat').href = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+
+      document.title = T[lang].meta_title;
+      document.querySelector('meta[name="description"]').content = T[lang].meta_desc;
+      document.getElementById('langBtn').textContent = lang.toUpperCase();
+
+      document.querySelectorAll('[data-lang]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      const url = new URL(window.location);
+      if (lang === 'es') { url.searchParams.delete('lang'); } else { url.searchParams.set('lang', lang); }
+      history.replaceState(null, '', url);
+    }
+
+    // Language dropdown
+    const langBtn = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+    langBtn.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('open'); });
+    document.addEventListener('click', () => { langMenu.classList.remove('open'); });
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => { setLang(btn.dataset.lang); langMenu.classList.remove('open'); });
+    });
+
+    // Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+    const noResults = document.getElementById('noResults');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        let visible = 0;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.type === filter;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    setLang(detectLang());
+  })();
+  </script>
+</body>
+</html>
