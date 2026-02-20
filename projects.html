@@ -19,6 +19,91 @@
   <meta property="og:title" content="Proyectos — EXCAVA.DO">
   <meta property="og:description" content="Galería de proyectos de excavación y movimiento de tierra en República Dominicana.">
   <meta property="og:site_name" content="EXCAVA.DO">
+  <meta property="og:image" content="https://excava.do/hero.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="843">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Proyectos — EXCAVA.DO | Excavación en República Dominicana">
+  <meta name="twitter:description" content="Galería de proyectos de excavación, movimiento de tierra y preparación de terrenos en RD.">
+  <meta name="twitter:image" content="https://excava.do/hero.jpg">
+
+  <!-- Structured Data: ItemList of Projects -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Proyectos de Excavación — EXCAVA.DO",
+    "description": "Galería de proyectos completados de excavación, movimiento de tierra y preparación de terrenos en República Dominicana.",
+    "url": "https://excava.do/projects.html",
+    "isPartOf": { "@type": "WebSite", "name": "EXCAVA.DO", "url": "https://excava.do" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Project",
+            "name": "Residencial Cana Bay",
+            "description": "Excavación de cimientos y movimiento de tierra para complejo residencial de lujo con 120 unidades.",
+            "location": { "@type": "Place", "name": "Punta Cana, La Altagracia, República Dominicana" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Project",
+            "name": "Acceso Vial Bávaro",
+            "description": "Nivelación y preparación de suelo para nueva vía de acceso en zona turística de Bávaro.",
+            "location": { "@type": "Place", "name": "Bávaro, La Altagracia, República Dominicana" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Project",
+            "name": "Resort Costa del Coco",
+            "description": "Desmonte y preparación de 15 hectáreas para nuevo resort todo-incluido frente al mar.",
+            "location": { "@type": "Place", "name": "Miches, El Seibo, República Dominicana" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Project",
+            "name": "Plaza Comercial Downtown",
+            "description": "Excavación profunda para estacionamiento subterráneo de centro comercial de 3 niveles.",
+            "location": { "@type": "Place", "name": "Santo Domingo Este, República Dominicana" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Project",
+            "name": "Parque Industrial Este",
+            "description": "Relleno y nivelación de terreno para zona industrial de 8 hectáreas.",
+            "location": { "@type": "Place", "name": "San Pedro de Macorís, República Dominicana" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Project",
+            "name": "Comunidad Cap Cana",
+            "description": "Limpieza y preparación de parcelas residenciales para nuevo desarrollo de viviendas.",
+            "location": { "@type": "Place", "name": "Cap Cana, La Altagracia, República Dominicana" }
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23D4A833' font-family='Arial Black' font-size='10' font-weight='900'%3EEX%3C/text%3E%3C/svg%3E">
 
@@ -156,6 +241,41 @@
       font-size: 1rem;
       max-width: 500px;
       margin: 0 auto;
+    }
+
+    /* ===== SEO TEXT SECTIONS ===== */
+    .seo-intro {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 20px 8px;
+      text-align: center;
+    }
+    .seo-intro p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .seo-bottom {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(212,168,51,0.12);
+    }
+    .seo-bottom h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .seo-bottom p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 14px;
     }
 
     /* ===== FILTER TABS ===== */
@@ -388,6 +508,11 @@
       <p data-i18n="page_subtitle">Proyectos completados y en curso en toda la República Dominicana.</p>
     </section>
 
+    <!-- SEO INTRO -->
+    <div class="seo-intro">
+      <p data-i18n="seo_intro">Desde Punta Cana hasta Santo Domingo, nuestro equipo de excavación y movimiento de tierra ha completado proyectos para los sectores inmobiliario, turístico, industrial y de infraestructura. Cada proyecto refleja nuestro compromiso con plazos claros, costos competitivos y resultados profesionales en toda la República Dominicana.</p>
+    </div>
+
     <!-- FILTER -->
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
@@ -466,6 +591,18 @@
         <p data-i18n="no_results">No hay proyectos en esta categoría aún.</p>
       </div>
     </section>
+
+    <!-- SEO BOTTOM CONTENT -->
+    <section class="seo-bottom">
+      <h2 data-i18n="seo_h2_exc">Excavación Profesional en República Dominicana</h2>
+      <p data-i18n="seo_p_exc">Nuestros servicios de excavación abarcan desde la apertura de cimientos para proyectos residenciales y comerciales hasta excavaciones profundas para estacionamientos subterráneos. Operamos con maquinaria pesada de última generación en las principales zonas de desarrollo de la isla, incluyendo Punta Cana, Bávaro, Cap Cana, Santo Domingo y San Pedro de Macorís.</p>
+
+      <h2 data-i18n="seo_h2_earth">Movimiento de Tierra para Construcción y Desarrollo</h2>
+      <p data-i18n="seo_p_earth">El movimiento de tierra es fundamental para cualquier proyecto de construcción en la República Dominicana. Realizamos traslado, nivelación y relleno de terrenos para obras viales, parques industriales, complejos turísticos y desarrollos inmobiliarios. Nuestro equipo garantiza la correcta compactación y preparación del suelo según las especificaciones técnicas de cada proyecto.</p>
+
+      <h2 data-i18n="seo_h2_land">Preparación de Terrenos en Punta Cana y toda RD</h2>
+      <p data-i18n="seo_p_land">La preparación de terreno incluye limpieza, desmonte, desbroce y nivelación inicial del suelo. Trabajamos con desarrolladores turísticos, constructoras inmobiliarias y proyectos industriales que requieren terrenos listos para construir. Desde resorts frente al mar en Miches hasta comunidades residenciales en Cap Cana, preparamos el terreno para que su proyecto avance sin demoras.</p>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -512,6 +649,13 @@
         p6_title: 'Comunidad Cap Cana', p6_loc: 'Cap Cana, La Altagracia',
         p6_desc: 'Limpieza y preparación de parcelas residenciales para nuevo desarrollo de viviendas.',
         no_results: 'No hay proyectos en esta categoría aún.',
+        seo_intro: 'Desde Punta Cana hasta Santo Domingo, nuestro equipo de excavación y movimiento de tierra ha completado proyectos para los sectores inmobiliario, turístico, industrial y de infraestructura. Cada proyecto refleja nuestro compromiso con plazos claros, costos competitivos y resultados profesionales en toda la República Dominicana.',
+        seo_h2_exc: 'Excavación Profesional en República Dominicana',
+        seo_p_exc: 'Nuestros servicios de excavación abarcan desde la apertura de cimientos para proyectos residenciales y comerciales hasta excavaciones profundas para estacionamientos subterráneos. Operamos con maquinaria pesada de última generación en las principales zonas de desarrollo de la isla, incluyendo Punta Cana, Bávaro, Cap Cana, Santo Domingo y San Pedro de Macorís.',
+        seo_h2_earth: 'Movimiento de Tierra para Construcción y Desarrollo',
+        seo_p_earth: 'El movimiento de tierra es fundamental para cualquier proyecto de construcción en la República Dominicana. Realizamos traslado, nivelación y relleno de terrenos para obras viales, parques industriales, complejos turísticos y desarrollos inmobiliarios. Nuestro equipo garantiza la correcta compactación y preparación del suelo según las especificaciones técnicas de cada proyecto.',
+        seo_h2_land: 'Preparación de Terrenos en Punta Cana y toda RD',
+        seo_p_land: 'La preparación de terreno incluye limpieza, desmonte, desbroce y nivelación inicial del suelo. Trabajamos con desarrolladores turísticos, constructoras inmobiliarias y proyectos industriales que requieren terrenos listos para construir. Desde resorts frente al mar en Miches hasta comunidades residenciales en Cap Cana, preparamos el terreno para que su proyecto avance sin demoras.',
         footer_tagline: 'Sirviendo toda República Dominicana',
         wa_msg: 'Hola, me gustaría solicitar una cotización para servicios de excavación.',
         meta_title: 'Proyectos — EXCAVA.DO | Excavación en República Dominicana',
@@ -536,6 +680,13 @@
         p6_title: 'Cap Cana Community', p6_loc: 'Cap Cana, La Altagracia',
         p6_desc: 'Clearing and preparation of residential lots for a new housing development.',
         no_results: 'No projects in this category yet.',
+        seo_intro: 'From Punta Cana to Santo Domingo, our excavation and earth moving team has completed projects across the real estate, tourism, industrial, and infrastructure sectors. Each project reflects our commitment to clear timelines, competitive pricing, and professional results throughout the Dominican Republic.',
+        seo_h2_exc: 'Professional Excavation in the Dominican Republic',
+        seo_p_exc: 'Our excavation services range from foundation work for residential and commercial developments to deep excavations for underground parking structures. We operate heavy machinery across the island\'s key development zones, including Punta Cana, Bávaro, Cap Cana, Santo Domingo, and San Pedro de Macorís.',
+        seo_h2_earth: 'Earth Moving for Construction and Development',
+        seo_p_earth: 'Earth moving is essential for any construction project in the Dominican Republic. We perform soil transport, leveling, and backfill for road works, industrial parks, tourism resorts, and real estate developments. Our team ensures proper compaction and soil preparation according to each project\'s technical specifications.',
+        seo_h2_land: 'Land Preparation in Punta Cana and across DR',
+        seo_p_land: 'Land preparation includes clearing, grubbing, brush removal, and initial ground leveling. We work with tourism developers, real estate builders, and industrial projects that require build-ready land. From beachfront resorts in Miches to residential communities in Cap Cana, we prepare the ground so your project moves forward without delays.',
         footer_tagline: 'Serving all of Dominican Republic',
         wa_msg: 'Hello, I would like to request a quote for excavation services.',
         meta_title: 'Projects — EXCAVA.DO | Excavation in Dominican Republic',
@@ -560,6 +711,13 @@
         p6_title: 'Communauté Cap Cana', p6_loc: 'Cap Cana, La Altagracia',
         p6_desc: 'Nettoyage et préparation de parcelles résidentielles pour un nouveau développement.',
         no_results: 'Pas encore de projets dans cette catégorie.',
+        seo_intro: 'De Punta Cana à Santo Domingo, notre équipe d\'excavation et de terrassement a réalisé des projets dans les secteurs immobilier, touristique, industriel et d\'infrastructure. Chaque projet reflète notre engagement envers des délais clairs, des coûts compétitifs et des résultats professionnels dans toute la République Dominicaine.',
+        seo_h2_exc: 'Excavation Professionnelle en République Dominicaine',
+        seo_p_exc: 'Nos services d\'excavation couvrent les fondations pour projets résidentiels et commerciaux jusqu\'aux excavations profondes pour parkings souterrains. Nous opérons avec des engins lourds de dernière génération dans les principales zones de développement de l\'île, notamment Punta Cana, Bávaro, Cap Cana, Santo Domingo et San Pedro de Macorís.',
+        seo_h2_earth: 'Terrassement pour la Construction et le Développement',
+        seo_p_earth: 'Le terrassement est essentiel pour tout projet de construction en République Dominicaine. Nous réalisons le transport, le nivellement et le remblai de terrains pour des travaux routiers, parcs industriels, complexes touristiques et développements immobiliers. Notre équipe garantit une compaction et préparation du sol conformes aux spécifications techniques de chaque projet.',
+        seo_h2_land: 'Préparation de Terrain à Punta Cana et dans toute la RD',
+        seo_p_land: 'La préparation de terrain comprend le nettoyage, le défrichage, le débroussaillage et le nivellement initial du sol. Nous travaillons avec des promoteurs touristiques, des constructeurs immobiliers et des projets industriels nécessitant des terrains prêts à construire. Des resorts en bord de mer à Miches aux communautés résidentielles à Cap Cana, nous préparons le terrain pour que votre projet avance sans retard.',
         footer_tagline: 'Au service de toute la République Dominicaine',
         wa_msg: 'Bonjour, je souhaiterais demander un devis pour des services d\'excavation.',
         meta_title: 'Projets — EXCAVA.DO | Excavation en République Dominicaine',
@@ -584,6 +742,13 @@
         p6_title: 'Comunità Cap Cana', p6_loc: 'Cap Cana, La Altagracia',
         p6_desc: 'Pulizia e preparazione di lotti residenziali per un nuovo sviluppo abitativo.',
         no_results: 'Nessun progetto in questa categoria ancora.',
+        seo_intro: 'Da Punta Cana a Santo Domingo, il nostro team di scavo e movimento terra ha completato progetti nei settori immobiliare, turistico, industriale e infrastrutturale. Ogni progetto riflette il nostro impegno per tempistiche chiare, costi competitivi e risultati professionali in tutta la Repubblica Dominicana.',
+        seo_h2_exc: 'Scavo Professionale nella Repubblica Dominicana',
+        seo_p_exc: 'I nostri servizi di scavo spaziano dalle fondamenta per progetti residenziali e commerciali agli scavi profondi per parcheggi sotterranei. Operiamo con macchinari pesanti di ultima generazione nelle principali zone di sviluppo dell\'isola, tra cui Punta Cana, Bávaro, Cap Cana, Santo Domingo e San Pedro de Macorís.',
+        seo_h2_earth: 'Movimento Terra per Costruzione e Sviluppo',
+        seo_p_earth: 'Il movimento terra è fondamentale per qualsiasi progetto di costruzione nella Repubblica Dominicana. Realizziamo trasporto, livellamento e riempimento di terreni per opere stradali, parchi industriali, resort turistici e sviluppi immobiliari. Il nostro team garantisce la corretta compattazione e preparazione del suolo secondo le specifiche tecniche di ogni progetto.',
+        seo_h2_land: 'Preparazione del Terreno a Punta Cana e in tutta la RD',
+        seo_p_land: 'La preparazione del terreno comprende pulizia, disboscamento, rimozione della vegetazione e livellamento iniziale del suolo. Lavoriamo con sviluppatori turistici, costruttori immobiliari e progetti industriali che richiedono terreni pronti per la costruzione. Dai resort fronte mare a Miches alle comunità residenziali a Cap Cana, prepariamo il terreno perché il vostro progetto proceda senza ritardi.',
         footer_tagline: 'Al servizio di tutta la Repubblica Dominicana',
         wa_msg: 'Ciao, vorrei richiedere un preventivo per servizi di scavo.',
         meta_title: 'Progetti — EXCAVA.DO | Scavo nella Repubblica Dominicana',
