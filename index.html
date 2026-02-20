@@ -199,24 +199,6 @@
       );
     }
 
-    /* Placeholder hero background for development */
-    .hero-bg-placeholder {
-      width: 100%;
-      height: 100%;
-      background:
-        radial-gradient(ellipse at 30% 40%, rgba(212,168,51,0.15) 0%, transparent 60%),
-        linear-gradient(135deg, #2a2a1a 0%, #1a1a14 40%, #1e1e1a 100%);
-    }
-    .hero-bg-placeholder::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 40%;
-      background: linear-gradient(0deg, var(--bg-dark), transparent);
-    }
-
     .hero-content {
       position: relative;
       z-index: 1;
@@ -324,25 +306,6 @@
       object-fit: cover;
     }
 
-    /* Placeholder service images */
-    .service-img-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-    }
-    .service-img-placeholder.excavation {
-      background: linear-gradient(135deg, #3a3520, #2a2818);
-    }
-    .service-img-placeholder.earthmoving {
-      background: linear-gradient(135deg, #2a3020, #1e2518);
-    }
-    .service-img-placeholder.landprep {
-      background: linear-gradient(135deg, #302a20, #25201a);
-    }
-
     .service-body {
       padding: 16px 16px 16px 0;
       display: flex;
@@ -406,30 +369,26 @@
 
     .partner-card {
       background: #fff;
-      border-radius: 10px;
-      padding: 16px 12px;
+      border-radius: 16px;
+      padding: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 70px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       border: 1px solid #e5e2db;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .partner-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .partner-card img {
-      max-height: 36px;
-      max-width: 100%;
-      object-fit: contain;
-    }
-
-    .partner-name {
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #555;
-      text-align: center;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
     }
 
     .partner-dots {
@@ -693,36 +652,36 @@
         <!-- Excavation -->
         <article class="service-card fade-in">
           <div class="service-img">
-            <div class="service-img-placeholder excavation" aria-hidden="true">🏗️</div>
+            <img src="svc-excavation.jpg" alt="Excavadora trabajando en terreno tropical - servicios de excavación en República Dominicana" width="600" height="450" loading="lazy">
           </div>
           <div class="service-body">
             <h3 class="service-name" data-i18n="svc1_name">Excavación</h3>
             <p class="service-desc" data-i18n="svc1_desc">Servicios de excavación para proyectos inmobiliarios, turísticos e industriales en la República Dominicana.</p>
-            <a href="projects.html" class="service-link" data-i18n="svc_more">Más Info ›</a>
+            <a href="projects.html?filter=excavation" class="service-link" data-i18n="svc_more">Más Info ›</a>
           </div>
         </article>
 
         <!-- Earth Moving -->
         <article class="service-card fade-in">
           <div class="service-img">
-            <div class="service-img-placeholder earthmoving" aria-hidden="true">🚜</div>
+            <img src="svc-earthmoving.jpg" alt="Cargadora frontal moviendo tierra - servicios de movimiento de tierra en República Dominicana" width="600" height="450" loading="lazy">
           </div>
           <div class="service-body">
             <h3 class="service-name" data-i18n="svc2_name">Movimiento de Tierra</h3>
             <p class="service-desc" data-i18n="svc2_desc">Traslado y nivelación de tierra para obras, relleno, caminos y terrenos en toda la isla.</p>
-            <a href="projects.html" class="service-link" data-i18n="svc_more">Más Info ›</a>
+            <a href="projects.html?filter=earthmoving" class="service-link" data-i18n="svc_more">Más Info ›</a>
           </div>
         </article>
 
         <!-- Land Preparation -->
         <article class="service-card fade-in">
           <div class="service-img">
-            <div class="service-img-placeholder landprep" aria-hidden="true">🌴</div>
+            <img src="svc-landprep.jpg" alt="Rodillo compactador preparando terreno - servicios de preparación de terreno en República Dominicana" width="600" height="450" loading="lazy">
           </div>
           <div class="service-body">
             <h3 class="service-name" data-i18n="svc3_name">Preparación de Terreno</h3>
             <p class="service-desc" data-i18n="svc3_desc">Limpieza, desmonte y preparación de terrenos para nuevos desarrollos y construcciones.</p>
-            <a href="projects.html" class="service-link" data-i18n="svc_more">Más Info ›</a>
+            <a href="projects.html?filter=landprep" class="service-link" data-i18n="svc_more">Más Info ›</a>
           </div>
         </article>
 
@@ -733,10 +692,18 @@
     <section class="partners" id="partners">
       <h2 class="section-title" data-i18n="partners_title">Nuestros Socios</h2>
       <div class="partners-grid">
-        <div class="partner-card"><span class="partner-name">Grupo Piñero</span></div>
-        <div class="partner-card"><span class="partner-name">Grupo Puntacana</span></div>
-        <div class="partner-card"><span class="partner-name">Stanza Mare</span></div>
-        <div class="partner-card"><span class="partner-name">Superior</span></div>
+        <a href="https://www.facebook.com/profile.php?id=100063761614681" target="_blank" rel="noopener" class="partner-card" aria-label="Residencial Roka Punta Cana">
+          <img src="partner-roka.jpg" alt="Residencial Roka Punta Cana" width="200" height="200" loading="lazy">
+        </a>
+        <div class="partner-card" aria-label="Roka Ultra Construction S.R.L.">
+          <img src="partner-rokaultra.jpg" alt="Roka Ultra Construction S.R.L." width="200" height="200" loading="lazy">
+        </div>
+        <a href="https://auxiliar.io/" target="_blank" rel="noopener" class="partner-card" aria-label="Auxiliar.io">
+          <img src="partner-auxiliar.png" alt="Auxiliar.io" width="200" height="200" loading="lazy">
+        </a>
+        <a href="https://www.facebook.com/GrupoAvalanchaSRL" target="_blank" rel="noopener" class="partner-card" aria-label="Grupo Avalancha S.R.L.">
+          <img src="partner-avalancha.jpg" alt="Grupo Avalancha S.R.L. - Laboratorio de Suelo, Hormigones y Pavimentos" width="200" height="200" loading="lazy">
+        </a>
       </div>
       <div class="partner-dots" aria-hidden="true">
         <span class="active"></span><span></span><span></span><span></span>
@@ -965,13 +932,15 @@
       });
 
       // Update URL without reload
-      const url = new URL(window.location);
-      if (lang === 'es') {
-        url.searchParams.delete('lang');
-      } else {
-        url.searchParams.set('lang', lang);
-      }
-      history.replaceState(null, '', url);
+      try {
+        const url = new URL(window.location);
+        if (lang === 'es') {
+          url.searchParams.delete('lang');
+        } else {
+          url.searchParams.set('lang', lang);
+        }
+        history.replaceState(null, '', url);
+      } catch(e) { /* iframe/preview environment */ }
     }
 
     // Language dropdown
