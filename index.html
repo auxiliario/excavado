@@ -39,6 +39,18 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23D4A833' font-family='Arial Black' font-size='10' font-weight='900'%3EEX%3C/text%3E%3C/svg%3E">
 
+  <!-- Google tag (gtag.js) — GA4 + Google Ads -->
+  <!-- Google Ads: AW-17966591429 -->
+  <!-- TODO: Add GA4 Measurement ID when available -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17966591429"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17966591429');
+    // gtag('config', 'G-XXXXXXXXXX'); // Uncomment when you have GA4 ID
+  </script>
+
   <!-- Preload critical font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -985,18 +997,49 @@
     // ===== INIT =====
     setLang(detectLang());
 
-    // ===== GA4 PLACEHOLDER =====
-    // TODO: Replace G-XXXXXXXXXX with actual GA4 measurement ID
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments);}
-    // gtag('js', new Date());
-    // gtag('config', 'G-XXXXXXXXXX');
+    // ===== GA4 + GOOGLE ADS CONVERSION TRACKING =====
+    // Track WhatsApp clicks as conversion events
+    document.querySelectorAll('.cta-whatsapp, .wa-float, a[href*="wa.me"]').forEach(el => {
+      el.addEventListener('click', function() {
+        const label = el.classList.contains('wa-float') ? 'floating_button'
+                    : el.classList.contains('cta-whatsapp') ? 'hero_cta'
+                    : 'footer_link';
 
-    // Track WhatsApp clicks
-    document.querySelectorAll('.cta-whatsapp, .wa-float').forEach(el => {
-      el.addEventListener('click', () => {
-        // gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: el.classList.contains('wa-float') ? 'floating' : 'hero_cta' });
-        console.log('WhatsApp click tracked');
+        // GA4 custom event
+        if (typeof gtag === 'function') {
+          gtag('event', 'whatsapp_click', {
+            event_category: 'conversion',
+            event_label: label,
+            page_location: window.location.href,
+            language: currentLang
+          });
+
+          // GA4 recommended lead event
+          gtag('event', 'generate_lead', {
+            event_category: 'engagement',
+            event_label: 'whatsapp_' + label
+          });
+
+          // Google Ads conversion (uncomment and replace with your conversion ID/label)
+          // gtag('event', 'conversion', {
+          //   send_to: 'AW-17966591429/CONVERSION_LABEL_HERE',
+          //   event_callback: function(){ return; }
+          // });
+        }
+
+        console.log('WA click:', label, currentLang);
+      });
+    });
+
+    // Track language switches
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'language_switch', {
+            event_category: 'engagement',
+            event_label: btn.dataset.lang
+          });
+        }
       });
     });
 
