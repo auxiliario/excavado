@@ -1020,11 +1020,12 @@
             event_label: 'whatsapp_' + label
           });
 
-          // Google Ads conversion (uncomment and replace with your conversion ID/label)
-          // gtag('event', 'conversion', {
-          //   send_to: 'AW-17966591429/CONVERSION_LABEL_HERE',
-          //   event_callback: function(){ return; }
-          // });
+          // Google Ads conversion
+          gtag('event', 'conversion', {
+            send_to: 'AW-17966591429/6OguCPvDm_wbEMXbkfdC',
+            value: 1.0,
+            currency: 'CAD'
+          });
         }
 
         console.log('WA click:', label, currentLang);
